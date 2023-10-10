@@ -21,6 +21,7 @@ async function checkweather(city) {
     }
     else {
         error.style.display = "none";
+        document.querySelector(".weather").style.display = "block";
         document.querySelector(".city").innerHTML = data.name;
         document.querySelector(".temp").innerHTML = data.main.temp + "°C";
         document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
@@ -47,7 +48,7 @@ async function checkweather(city) {
             document.querySelector('body').classList.add("mist");
         }
 
-        document.querySelector(".weather").classList.add("active");
+        
     }
 }
 
